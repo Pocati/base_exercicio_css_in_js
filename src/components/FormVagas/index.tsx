@@ -9,7 +9,7 @@ type Props = {
 const FormVagas = ({ aoPesquisar }: Props) => {
   const [termo, setTermo] = useState<string>('')
 
-  const aoEnviarForm = (e: FormEvent<HTMLDivElement>) => {
+  const aoEnviarForm = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     aoPesquisar(termo.toLocaleLowerCase())
   }
